@@ -8,19 +8,48 @@
 </head>
 <body>
     <div class="container">
-        <img src="https://cataas.com/cat/love" alt="Cat Image" class="cat-image">
+        <img src="https://cataas.com/cat/love/says/would%20you%20like%20to%20be%20my%20valentine" alt="Cat Image" class="cat-image">
+        
+        <!-- Buttons -->
         <button id="loveButton" class="btn">I would love to</button>
         <button id="hateButton" class="btn">No, I hate you</button>
+
+        <!-- Placeholder for the Cataas GIF and Yippee text -->
+        <div id="gifContainer"></div>
     </div>
 
     <script>
         // JavaScript for button interaction
+
+        // Grow the "I would love to" button when "No, I hate you" is clicked
         document.getElementById('hateButton').addEventListener('click', function() {
             const loveButton = document.getElementById('loveButton');
             const scale = 1.2; // Define the growth scale
 
             // Increase the size of the "I would love to" button
             loveButton.style.transform = `scale(${scale})`;
+        });
+
+        // Show the Cataas GIF and "Yippee!" when "I would love to" is clicked
+        document.getElementById('loveButton').addEventListener('click', function() {
+            // Get the container where we will display the GIF and the "yippee" text
+            const gifContainer = document.getElementById('gifContainer');
+
+            // Create the img element for the Cataas GIF
+            const gif = document.createElement('img');
+            gif.src = 'https://cataas.com/cat/gif'; // URL for random GIF from Cataas
+            gif.alt = 'Yippee Cat GIF';
+
+            // Create the p element for the "yippee" text
+            const text = document.createElement('p');
+            text.textContent = 'Yippee!';
+
+            // Clear any existing content in the gifContainer (in case the user clicked the button multiple times)
+            gifContainer.innerHTML = '';
+
+            // Append the GIF and text to the container
+            gifContainer.appendChild(gif);
+            gifContainer.appendChild(text);
         });
     </script>
 </body>
