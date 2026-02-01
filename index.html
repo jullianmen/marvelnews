@@ -8,8 +8,8 @@
 </head>
 <body>
     <div class="container">
-        <!-- Cat image at the top -->
-        <img src="https://cataas.com/cat/love/says/would%20you%20like%20to%20be%20my%20valentine" alt="Cat Image" class="cat-image">
+        <!-- Cat image at the top, will be replaced by the GIF -->
+        <img id="initialImage" src="https://cataas.com/cat/love/says/would%20you%20like%20to%20be%20my%20valentine" alt="Cat Image" class="cat-image">
         
         <!-- Buttons below the image -->
         <div class="buttons-container">
@@ -38,13 +38,12 @@
 
         // Show the Cataas GIF and "Yippee!" when "I would love to" is clicked
         document.getElementById('loveButton').addEventListener('click', function() {
-            // Get the container where we will display the GIF and the "yippee" text
-            const gifContainer = document.getElementById('gifContainer');
+            // Get the initial image and replace it with the GIF
+            const initialImage = document.getElementById('initialImage');
+            initialImage.src = 'https://cataas.com/cat/gif'; // Replace with a random Cataas GIF
 
-            // Create the img element for the Cataas GIF
-            const gif = document.createElement('img');
-            gif.src = 'https://cataas.com/cat/gif'; // URL for random GIF from Cataas
-            gif.alt = 'Yippee Cat GIF';
+            // Get the container where we will display the "yippee" text
+            const gifContainer = document.getElementById('gifContainer');
 
             // Create the p element for the "yippee" text
             const text = document.createElement('p');
@@ -53,16 +52,12 @@
             // Clear any existing content in the gifContainer (in case the user clicked the button multiple times)
             gifContainer.innerHTML = '';
 
-            // Append the GIF and text to the container
-            gifContainer.appendChild(gif);
+            // Append the "Yippee!" text to the container
             gifContainer.appendChild(text);
         });
     </script>
 </body>
 </html>
 
-    </script>
-</body>
-</html>
 
 
