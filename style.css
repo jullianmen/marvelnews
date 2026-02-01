@@ -1,177 +1,41 @@
-/* 
-! =========================
-        Style de texte
-! =========================
-*/
-
-/* change la couleur du texte */
-#textColor{
-    /* color:brown; */
-    color:blue;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* change la taille du texte */
-#textSize{
-    font-size:32pt; /* pt -> point */
-    font-size:32cm; /* cm -> centimetre */
-    font-size:32em; /* em -> multiple de la taille de police défini dans le parent */
-    font-size:32rem; /* rem -> multiple de la taille de police défini dans la base du document (:root, body) */
-
-    font-size:32px; /* px -> pixel */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
 }
 
-/* change le gras du texte */
-#textWeight{
-    font-weight: 700;
-}
-
-/* change l'alignement du text */
-#textAlign-left{
-    text-align: left;
-}
-#textAlign-right{
-    text-align: right;
-}
-#textAlign-center{
+.container {
     text-align: center;
 }
-#textAlign-justify{
-    text-align: justify;
+
+.btn {
+    padding: 20px 40px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    transition: transform 0.2s ease;
 }
 
-/* change la casse du texte */
-#textTransform{
-    text-transform: uppercase; /* majuscule*/ 
-    text-transform: lowercase; /* minuscule*/ 
-    text-transform: capitalize; /* 1er lettrer de chaque mot en majuscule*/ 
+#hateButton {
+    background-color: #f44336;
 }
 
-
-/* 
-! =========================
-        Style de container
-! =========================
-*/
-
-#boxStyle div{
-    margin-block: 32px;
+#hateButton:active {
+    transform: scale(1.2);
 }
 
-#boxBackground {
-
-    border: 2px solid aqua; /* creer une bordure */
+#loveButton:active {
+    transform: scale(1.2);
 }
-
-#boxBackground h3{
-    /* 
-        -  gras, 
-        -  aligné au centre de ma page
-        -  taille de 64px
-        -  couleur Navy
-        -  Capitalize
-    */
-    font-weight: 800;
-    text-align:center;
-    font-size: 64px;
-    color:navy;
-    text-transform: capitalize;
-}
-
-#box-color{
-    height: 50px;
-
-    background-color: tan;
-}
-
-#box-image{
-    height: 100px;
-    width: 100px;
-    background-image: url("https://cataas.com/cat");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#box-gradient{
-    height: 50px;
-
-    background: linear-gradient(
-        90deg,
-        #3f87a6 10%,
-        #ebf8e1 30%, 
-        #f69d3c 70%
-    ) ;
-}
-
-#box-shadow{
-    width: 100px;
-    height: 100px;
-
-    margin-inline: auto;
-    
-    /* Faire des ombres */
-    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.509);
-
-    /* arrondir les angles */
-    border-radius: 10px;
-    
-}
-
-#box-spacing{
-    /* Marge = espaces externe */
-    /* Padding = espaces interne */
-
-    background-color: crimson;
-
-    padding-inline: 64px;
-
-}
-
-.spacing{
-    height: 100px;
-    margin-block:16px;
-
-    background-color: blue;
-}
-
-.spacing.center{
-    margin: auto;
-    width: 100px;
-}
-
-#boxPositioning{
-    position: relative;
-    
-}
-
-#boxPositioning div{
-    margin-block: 16px;
-    background-color: chartreuse;
-    height: 100px;
-    width: 100px;
-}
-
-#box-absolute{
-    position:absolute;
-    right: 0;
-    top: 0;
-
-}
-/* methode flex-box */
-div#box-flex{
-    width: 100%;
-    height: 500px;
-    background-color: #282828;
-    
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-
-div#box-flex .flex-child{
-    background-color: #ececec;
-
-}
-
- 
