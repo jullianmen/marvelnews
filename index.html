@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Love or Hate</title>
+    <title>Valentine</title>
 </head>
 <body>
     <div class="container">
@@ -12,7 +12,15 @@
         <button id="hateButton" class="btn">No, I hate you</button>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        // JavaScript for button interaction
+        document.getElementById('hateButton').addEventListener('click', function() {
+            const loveButton = document.getElementById('loveButton');
+            const scale = 1.2; // Define the growth scale
+
+            // Increase the size of the "I would love to" button
+            loveButton.style.transform = `scale(${scale})`;
+        });
+    </script>
 </body>
 </html>
-
